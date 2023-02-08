@@ -1,3 +1,7 @@
+"""
+Module works with board.
+"""
+
 def check_horizontal(board: list, row_num: int) -> bool:
     """
     Function checks if there are no same digit numbers
@@ -19,8 +23,8 @@ def check_vertical(board: list, index: int) -> bool:
     stack = []
     for ind, elem in enumerate(board):
         for j in range(len(elem)):
-            if j == index and elem[j].isdigit():
-                stack.append(j)
+            if j == index and board[ind][index].isdigit():
+                stack.append(board[ind][index])
     for i in stack:
         if stack.count(i) > 1:
             return False
@@ -47,7 +51,9 @@ def validate_board(board):
     Validates all the board
     """
     for i in range(9):
-        if not (check_horizontal(board, i) and check_vertical(board, i)):
+        if not check_vertical(board, i):
+            return False
+        if not check_horizontal(board, i):
             return False
     if not check_by_flag(board):
         return False
