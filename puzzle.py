@@ -1,4 +1,8 @@
-def check_horizontal(board:list[str], row_num: int) -> bool:
+def check_horizontal(board: list, row_num: int) -> bool:
+    """
+    Function checks if there are no same digit numbers
+    in one row on the board.
+    """
     for digit in board[row_num]:
         if digit.isdigit() and board[row_num].count(digit) > 1:
             return False
