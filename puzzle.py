@@ -18,4 +18,9 @@ def check_by_flag(board):
 
 
 def validate_board(board):
-    pass
+
+    for i in range(9):
+        if not (check_horizontal(board, i) and check_vertical(board, i)):
+            return False
+
+    return check_by_flag(board)
