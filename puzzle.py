@@ -27,3 +27,7 @@ def check_by_flag(board: list) -> bool:
     in one flag on the board.
     """
     pass
+
+
+def validate_board(board):
+    pass
