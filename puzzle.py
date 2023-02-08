@@ -8,3 +8,7 @@ def check_vertical(board, index):
 
 def check_by_flag(board):
     pass
+
+
+def validate_board(board):
+    pass
