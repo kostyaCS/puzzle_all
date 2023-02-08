@@ -13,8 +13,11 @@ def check_vertical(board, index):
     return True
 
 
-def check_by_flag(board):
-
+def check_by_flag(board: list) -> bool:
+    """
+    Function checks if there are no same digit numbers
+    in one flag on the board.
+    """
     for index_i in range(9):
         test = board[8 - index_i][index_i+1:]
         for index_j in range(0, 9-index_i):
