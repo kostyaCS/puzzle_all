@@ -14,7 +14,15 @@ def check_vertical(board, index):
 
 
 def check_by_flag(board):
-    pass
+
+    for index_i in range(9):
+        test = board[8 - index_i][index_i+1:]
+        for index_j in range(0, 9-index_i):
+            test += board[index_j][index_i]
+        for check in range(1, 10):
+            if test.count(str(check)) >= 2:
+                return False
+    return True
 
 
 def validate_board(board):
