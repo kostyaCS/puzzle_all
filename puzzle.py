@@ -1,7 +1,7 @@
 def check_horizontal(board: list, row_num: int) -> bool:
     """
     Function checks if there are no same digit numbers
-    in one row on the board
+    in one row on the board.
     """
     pass
 
@@ -9,7 +9,7 @@ def check_horizontal(board: list, row_num: int) -> bool:
 def check_vertical(board: list, index: int) -> bool:
     """
     Function checks if there are no same digit numbers
-    in one column on the board
+    in one column on the board.
     """
     stack = []
     for ind, elem in enumerate(board):
@@ -24,6 +24,6 @@ def check_vertical(board: list, index: int) -> bool:
 def check_by_flag(board: list) -> bool:
     """
     Function checks if there are no same digit numbers
-    in one flag on the board
+    in one flag on the board.
     """
     pass
