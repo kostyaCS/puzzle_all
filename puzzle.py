@@ -1,7 +1,6 @@
 def check_horizontal(board:list[str], row_num: int) -> bool:
     '''
     Check if row is valid to coninue playing
-    >>>
     '''
     for digit in board[row_num]:
         if digit.isdigit() and board[row_num].count(digit) > 1:
